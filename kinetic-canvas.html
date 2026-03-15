@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Canvas — Louis Brouwer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-elevated: #141414;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --accent: #c8c8c8;
+            --border: #222;
+            --max-width: 1100px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--text-muted);
+            text-underline-offset: 3px;
+            transition: text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            text-decoration-color: var(--text);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .name {
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+        }
+
+        nav .links {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav .links a {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav .links a:hover {
+            color: var(--text);
+        }
+
+        /* PROJECT PAGE */
+        .project {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            margin-bottom: 48px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+        }
+
+        .project-title {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .project-context {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 48px;
+        }
+
+        .tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 56px;
+        }
+
+        .gallery img {
+            width: 100%;
+            display: block;
+            background: #1a1a1a;
+        }
+
+        /* DESCRIPTION */
+        .project-description {
+            max-width: 720px;
+            margin-bottom: 40px;
+        }
+
+        .project-description p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .project-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* GITHUB LINK */
+        .project-link {
+            display: inline-block;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .project-link:hover {
+            color: var(--text);
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            nav .links { gap: 16px; }
+            nav .links a { font-size: 12px; }
+            .project { padding: 100px 20px 60px; }
+            .project-title { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="name">Louis Brouwer</a>
+        <div class="links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#reading">Reading</a>
+            <a href="index.html#log">Log</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="project">
+        <a href="index.html#work" class="back-link">&larr; Back</a>
+
+        <h1 class="project-title">Kinetic Canvas</h1>
+        <div class="project-context">IDE Cyberphysical Systems / 2025</div>
+        <div class="project-tags">
+            <span class="tag">Mechanical Engineering</span>
+            <span class="tag">Electronics</span>
+            <span class="tag">Software</span>
+            <span class="tag">Branding</span>
+        </div>
+
+        <div class="gallery">
+            <img src="images/kinetic-canvas/hero.jpg" alt="Kinetic Canvas hero shot">
+            <img src="images/kinetic-canvas/full-view.jpg" alt="Kinetic Canvas full view">
+            <img src="images/kinetic-canvas/angle.jpg" alt="Kinetic Canvas angle view">
+            <img src="images/kinetic-canvas/servos.jpg" alt="Servo motor array">
+            <img src="images/kinetic-canvas/fabric-detail.jpg" alt="Fabric surface detail">
+            <img src="images/kinetic-canvas/team.jpg" alt="Team photo">
+        </div>
+
+        <div class="project-description">
+            <p>A kinetic sculpture driven by mechanical linkage systems and custom control software. The piece features a fabric surface animated by an array of servo motors, creating flowing wave-like patterns of light and motion. Designed the mechanical architecture, co-developed the embedded software, and built the brand identity.</p>
+            <p>Won the Interplay competition. Pitched commercially at PS Labs, Bermondsey.</p>
+        </div>
+
+        <a href="https://github.com/louisbrouwer/kinetic-canvas" class="project-link" target="_blank">View on GitHub &rarr;</a>
+    </main>
+
+    <footer>
+        &copy; 2025 Louis Brouwer
+    </footer>
+
+</body>
+</html>
