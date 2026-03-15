@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Brouwer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-elevated: #141414;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --accent: #c8c8c8;
+            --border: #222;
+            --max-width: 1100px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--text-muted);
+            text-underline-offset: 3px;
+            transition: text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            text-decoration-color: var(--text);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .name {
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+        }
+
+        nav .links {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav .links a {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav .links a:hover {
+            color: var(--text);
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 60px 40px;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(10,10,10,0.3) 0%,
+                rgba(10,10,10,0.1) 40%,
+                rgba(10,10,10,0.7) 80%,
+                rgba(10,10,10,1) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: var(--max-width);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .hero .tagline {
+            font-size: 18px;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 600px;
+        }
+
+        .hero .hero-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* SECTIONS */
+        section {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        section h2 {
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* ABOUT */
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .about-details {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .about-details dt {
+            font-weight: 500;
+            color: var(--text);
+            margin-top: 16px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .about-details dt:first-child {
+            margin-top: 0;
+        }
+
+        .about-details dd {
+            margin-top: 4px;
+            font-weight: 300;
+        }
+
+        /* WORK */
+        .work-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .work-item {
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .work-item:hover {
+            border-color: #333;
+        }
+
+        .work-item.featured {
+            grid-column: 1 / -1;
+        }
+
+        .work-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            background: #1a1a1a;
+        }
+
+        .work-item.featured .work-img {
+            height: 400px;
+        }
+
+        .work-info {
+            padding: 24px;
+        }
+
+        .work-info h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .work-info .work-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .work-info p {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .work-info .work-tags {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .work-info .tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* READING */
+        .reading-list {
+            display: grid;
+            gap: 0;
+        }
+
+        .reading-item {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            align-items: baseline;
+        }
+
+        .reading-item:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .book-title {
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .book-author {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .book-year {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* LOG */
+        .log-entry {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .log-entry:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .log-date {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .log-entry h3 {
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .log-entry p {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+        .contact-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-content a {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .contact-content a:hover {
+            color: var(--text);
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            nav .links { gap: 16px; }
+            nav .links a { font-size: 12px; }
+            section { padding: 60px 20px; }
+            .hero { padding: 40px 20px; }
+            .hero h1 { font-size: 32px; }
+            .about-content { grid-template-columns: 1fr; gap: 40px; }
+            .work-grid { grid-template-columns: 1fr; }
+            .work-item.featured .work-img { height: 250px; }
+            .work-img { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="name">Louis Brouwer</a>
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#reading">Reading</a>
+            <a href="#log">Log</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <!-- Replace src with your Kinetic Canvas video file -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="kinetic-canvas.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Louis Brouwer</h1>
+            <p class="tagline">Engineer and designer. Building physical things that work and matter.</p>
+            <a href="https://github.com/louisbrouwer/kinetic-canvas" class="hero-link" target="_blank">View Kinetic Canvas on GitHub &rarr;</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I build physical systems. My background is mechanical engineering (Edinburgh, First Class, IMechE Best Student Award) and design innovation (Imperial College London and the Royal College of Art).</p>
+                <p>Right now I work as an R&D engineer at Rivan Industries, a climate tech startup developing direct air capture and synthetic fuel technology. I designed and validated the 100kW carbonation prototype, one of three core modules in the DAC system architecture.</p>
+                <p>Before engineering I ran a furniture business called Boog Design out of my parents' garage. Over 25 commissions delivered, roughly £50k in revenue, starting at age 15. I still make things for myself and people I care about.</p>
+                <p>I've captained a 57 foot sailing yacht across the Atlantic and back. Four crossings total. I surf whenever I can.</p>
+                <p>I hold UK and Dutch citizenship.</p>
+            </div>
+            <dl class="about-details">
+                <dt>Currently</dt>
+                <dd>R&D Engineer, Rivan Industries</dd>
+                <dt>Education</dt>
+                <dd>MSc/MA Innovation Design Engineering, Imperial &amp; RCA (2026)</dd>
+                <dd>BEng Mechanical Engineering, Edinburgh (First Class)</dd>
+                <dt>Location</dt>
+                <dd>London, UK</dd>
+                <dt>CV</dt>
+                <dd><a href="Louis-Brouwer-CV.pdf" download>Download PDF</a></dd>
+            </dl>
+        </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+        <h2>Selected Work</h2>
+        <div class="work-grid">
+
+            <div class="work-item featured">
+                <!-- Replace with your Kinetic Canvas hero image -->
+                <img class="work-img" src="" alt="Kinetic Canvas">
+                <div class="work-info">
+                    <h3>Kinetic Canvas</h3>
+                    <div class="work-meta">IDE Cyberphysical Systems / 2025</div>
+                    <p>A kinetic sculpture driven by mechanical linkage systems and custom control software. Designed the mechanical architecture, co-developed embedded software, and built a brand identity. Won the Interplay competition. Pitched commercially at PS Labs, Bermondsey.</p>
+                    <div class="work-tags">
+                        <span class="tag">Mechanical Engineering</span>
+                        <span class="tag">Electronics</span>
+                        <span class="tag">Software</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <img class="work-img" src="" alt="Rivan DAC Prototype">
+                <div class="work-info">
+                    <h3>Rivan Industries: DAC Carbonation System</h3>
+                    <div class="work-meta">Rivan Industries / 2025 &ndash; Present</div>
+                    <p>Designed and validated a 100kW carbonation prototype for direct air capture. Represents one third of the full DAC system architecture. Research, hypothesis formation, prototyping, testing, and system modelling.</p>
+                    <div class="work-tags">
+                        <span class="tag">Mechanical Engineering</span>
+                        <span class="tag">Thermodynamics</span>
+                        <span class="tag">Prototyping</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <img class="work-img" src="" alt="LeveL">
+                <div class="work-info">
+                    <h3>LeveL: Gambling Harm Prevention</h3>
+                    <div class="work-meta">IDE Group Project / 2025</div>
+                    <p>A system combining vibrotactile stimulation, peer support, open banking integration, and geo-activation to reduce gambling harm. Designed and executed a double blind controlled trial. Built measurement hardware and Swift application.</p>
+                    <div class="work-tags">
+                        <span class="tag">Service Design</span>
+                        <span class="tag">Scientific Method</span>
+                        <span class="tag">Software (Swift)</span>
+                        <span class="tag">Hardware</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <img class="work-img" src="" alt="SuperGreen Roman Concrete Stool">
+                <div class="work-info">
+                    <h3>SuperGreen: Roman Concrete Stool</h3>
+                    <div class="work-meta">IDE SuperGreen Module / 2025</div>
+                    <p>A stool cast from Roman Concrete, exploring sustainable alternatives for architects. Form designed to highlight compressive strength while carrying a distinct Roman aesthetic. Material exploration meets design narrative.</p>
+                    <div class="work-tags">
+                        <span class="tag">Material Science</span>
+                        <span class="tag">Physical Making</span>
+                        <span class="tag">Sustainability</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <img class="work-img" src="" alt="Boog Design furniture">
+                <div class="work-info">
+                    <h3>Boog Design</h3>
+                    <div class="work-meta">Personal Business / 2015 &ndash; 2022</div>
+                    <p>A furniture design and fabrication business started at age 15. Over 25 commissions delivered including kitchens, tables, stools, shelving, and bespoke pieces. Roughly £50k total revenue.</p>
+                    <div class="work-tags">
+                        <span class="tag">Woodworking</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">Business</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <img class="work-img" src="" alt="Imperial College Rocketry">
+                <div class="work-info">
+                    <h3>Imperial College Rocketry: Pluto</h3>
+                    <div class="work-meta">Extracurricular / 2024 &ndash; 2025</div>
+                    <p>Led the stringer design for the Pluto liquid fueled rocket. Supervised two undergraduate engineers. Structural analysis and fabrication for a student built launch vehicle.</p>
+                    <div class="work-tags">
+                        <span class="tag">Aerospace</span>
+                        <span class="tag">Structural Analysis</span>
+                        <span class="tag">Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- READING -->
+    <section id="reading">
+        <h2>Reading</h2>
+        <div class="reading-list">
+            <!-- Add your books here. Format: -->
+            <div class="reading-item">
+                <div>
+                    <span class="book-title">The Hard Thing About Hard Things</span>
+                    <span class="book-author"> &mdash; Ben Horowitz</span>
+                </div>
+                <span class="book-year">2026</span>
+            </div>
+            <div class="reading-item">
+                <div>
+                    <span class="book-title">How to Be a Founder</span>
+                    <span class="book-author"> &mdash; Alice Bentinck &amp; Matt Clifford</span>
+                </div>
+                <span class="book-year">2026</span>
+            </div>
+            <div class="reading-item">
+                <div>
+                    <span class="book-title">Designing Your Life</span>
+                    <span class="book-author"> &mdash; Bill Burnett &amp; Dave Evans</span>
+                </div>
+                <span class="book-year">2025</span>
+            </div>
+            <div class="reading-item">
+                <div>
+                    <span class="book-title">The Library of Babel</span>
+                    <span class="book-author"> &mdash; Jorge Luis Borges</span>
+                </div>
+                <span class="book-year">2025</span>
+            </div>
+            <!-- Add more books by copying the pattern above -->
+        </div>
+    </section>
+
+    <!-- LOG -->
+    <section id="log">
+        <h2>Log</h2>
+        <div class="log-entry">
+            <div class="log-date">March 2026</div>
+            <h3>Thesis work and career planning</h3>
+            <p>Deep into my IDE thesis project. Spending time with recursive thinking, the Library of Babel, and questions about whether materiality still holds the value I once assigned it. Separately, casting a wide net on career options. Exploring VC, product management, and founder paths. The philosophy right now: you can't make decisions in a vacuum. Generate options first.</p>
+        </div>
+        <div class="log-entry">
+            <div class="log-date">January 2026</div>
+            <h3>Rivan: 100kW carbonation prototype validated</h3>
+            <p>Completed design and validation of the carbonation prototype at Rivan Industries. This module represents one third of the full DAC system architecture. Research, hypothesis, prototype, test, iterate. The work is satisfying because it is measurable.</p>
+        </div>
+        <div class="log-entry">
+            <div class="log-date">September 2025</div>
+            <h3>Joined Rivan Industries</h3>
+            <p>Started as an R&D Mechanical Engineer at Rivan while continuing IDE at Imperial and RCA. Working on direct air capture and synthetic fuel technology. Designing machines that pull carbon from the atmosphere.</p>
+        </div>
+        <!-- Add more entries by copying the pattern above -->
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-content">
+            <a href="mailto:loet.d.s.brouwer@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/louisbrouwer/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/louisbrouwer" target="_blank">GitHub</a>
+            <a href="Louis-Brouwer-CV.pdf" download>Download CV</a>
+        </div>
+    </section>
+
+    <footer>
+        Louis Brouwer &copy; 2026
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
