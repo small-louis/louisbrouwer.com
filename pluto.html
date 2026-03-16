@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperial College Rocketry: Pluto — Louis Brouwer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-elevated: #141414;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --accent: #c8c8c8;
+            --border: #222;
+            --max-width: 1100px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--text-muted);
+            text-underline-offset: 3px;
+            transition: text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            text-decoration-color: var(--text);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .name {
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+        }
+
+        nav .links {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav .links a {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav .links a:hover {
+            color: var(--text);
+        }
+
+        /* PROJECT PAGE */
+        .project-page {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+        }
+
+        .project-title {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .project-context {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 48px;
+        }
+
+        .project-tags .tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .project-description {
+            max-width: 720px;
+        }
+
+        .project-description h2 {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .project-description h2:first-child {
+            margin-top: 0;
+        }
+
+        .project-description p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .project-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-description ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .project-description ul li {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: var(--text);
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .project-description ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+        }
+
+        .project-download {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-download a {
+            font-size: 14px;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .project-download a:hover {
+            color: var(--text);
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            nav .links { gap: 16px; }
+            nav .links a { font-size: 12px; }
+            .project-page { padding: 100px 20px 60px; }
+            .project-title { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="name">Louis Brouwer</a>
+        <div class="links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#reading">Reading</a>
+            <a href="index.html#log">Log</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="project-page">
+
+        <a href="index.html#work" class="back-link">&larr; Back</a>
+
+        <h1 class="project-title">Imperial College Rocketry: Pluto</h1>
+        <p class="project-context">ICLR Structures Sub-team / 2024 &ndash; 2025</p>
+
+        <div class="project-tags">
+            <span class="tag">Aerospace</span>
+            <span class="tag">Structural Analysis</span>
+            <span class="tag">FEA</span>
+            <span class="tag">Leadership</span>
+        </div>
+
+        <div class="project-description">
+
+            <h2>The Rocket</h2>
+            <p>Pluto is a liquid bi-propellant sounding rocket designed and built by Imperial College London Rocketry, a student team of roughly 150 members. It stands 4.5 metres tall, weighs 81 kg at lift-off, and is powered by GOOFY, a 6 kN student-researched-and-developed regeneratively cooled engine running on nitrous oxide and isopropanol. The vehicle was entered into the 9 km apogee category at EuRoC 2025, the European Rocketry Challenge held in Portugal.</p>
+
+            <h2>Stringer Design</h2>
+            <p>I led the design of Pluto's stringer system within the structures sub-team, supervising two undergraduate engineers through the process. The airframe uses a skeletal architecture rather than a conventional skin — three aluminium 6082-T6 stringers arranged in threefold symmetry, aligned with the fin positions, form the primary load path between the engine and the propellant tank.</p>
+
+            <p>The stringers carry the full 6 kN compressive thrust load from the engine truss up into the tank's lower bulkhead. Initial sizing was done through Euler buckling analysis, with the critical load calculated as P<sub>cr</sub> = &pi;&sup2;EI / L<sub>eff</sub>&sup2;. The profiles were then mass-optimised by introducing cut-out holes along their length, reducing weight without compromising structural integrity.</p>
+
+            <h2>Simulation &amp; Validation</h2>
+            <p>Detailed buckling simulations were carried out in Abaqus CAE to validate the final geometry. The first buckling mode returned a safety factor of 3.6, confirming adequate margin against the design load. The analysis captured both local and global buckling behaviour to ensure the cut-out pattern did not introduce unexpected failure modes.</p>
+
+            <p>The stringers were water-jet cut from aluminium plate and connect at their base to a generatively designed engine truss. That truss, additively manufactured in AlSi10Mg, was compression tested to the full 6 kN engine load before being cleared for flight.</p>
+
+            <h2>Vehicle Overview</h2>
+            <ul>
+                <li>Predicted apogee: 4,608 m AGL</li>
+                <li>Maximum speed: 296 m/s (Mach 0.88)</li>
+                <li>Peak acceleration: 5.64 g</li>
+                <li>Burn time: 9.1 seconds</li>
+                <li>Total flight time: 238.8 seconds</li>
+                <li>Engine: 6 kN SRAD regeneratively cooled (pintle injector, 7+ successful hot-fires)</li>
+                <li>Propellant tank: common bulkhead, 18.5 kg</li>
+                <li>Recovery: reefed parachute with non-pyrotechnic clamp-band separation</li>
+            </ul>
+
+        </div>
+
+        <div class="project-download">
+            <a href="Pluto_Technical_Report.pdf" download>Download the full EuRoC technical report (PDF)</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Louis Brouwer
+    </footer>
+
+</body>
+</html>
