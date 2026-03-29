@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivan Industries: DAC Carbonation System — Louis Brouwer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-elevated: #141414;
+            --text: #e0e0e0;
+            --text-muted: #888;
+            --accent: #c8c8c8;
+            --border: #222;
+            --max-width: 1100px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: var(--text-muted);
+            text-underline-offset: 3px;
+            transition: text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            text-decoration-color: var(--text);
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .name {
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+        }
+
+        nav .links {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav .links a {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav .links a:hover {
+            color: var(--text);
+        }
+
+        /* PROJECT PAGE */
+        .project-page {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            margin-bottom: 40px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text);
+        }
+
+        .project-title {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .project-context {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 48px;
+        }
+
+        .project-tags .tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .project-hero {
+            width: 100%;
+            display: block;
+            margin-bottom: 48px;
+        }
+
+        .project-hero img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-description {
+            max-width: 720px;
+        }
+
+        .project-description h2 {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .project-description h2:first-child {
+            margin-top: 0;
+        }
+
+        .project-description p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .project-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            nav .links { gap: 16px; }
+            nav .links a { font-size: 12px; }
+            .project-page { padding: 100px 20px 60px; }
+            .project-title { font-size: 28px; }
+            .project-gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="name">Louis Brouwer</a>
+        <div class="links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#reading">Reading</a>
+            <a href="index.html#log">Log</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="project-page">
+
+        <a href="index.html#work" class="back-link">&larr; Back</a>
+
+        <h1 class="project-title">Rivan Industries: DAC Carbonation System</h1>
+        <p class="project-context">R&amp;D Mechanical Engineer / 2025 &ndash; Present</p>
+
+        <div class="project-tags">
+            <span class="tag">Mechanical Engineering</span>
+            <span class="tag">Thermodynamics</span>
+            <span class="tag">Prototyping</span>
+        </div>
+
+        <div class="project-hero">
+            <img src="images/rivan/carb-rig.jpg" alt="100kW carbonation prototype">
+        </div>
+
+        <div class="project-description">
+
+            <h2>The Company</h2>
+            <p>Rivan Industries is a climate technology startup developing direct air capture and synthetic fuel technology. The system architecture is modular, built around three core process stages that together pull carbon dioxide from the atmosphere and convert it into usable fuel.</p>
+
+            <h2>My Role</h2>
+            <p>I joined as an R&amp;D Mechanical Engineer while continuing my masters at Imperial College London and the Royal College of Art. My primary responsibility has been the design and validation of the 100kW carbonation prototype &mdash; one of three core modules in the full DAC system architecture.</p>
+
+            <p>The work follows a tight loop: research, hypothesis formation, prototyping, testing, and system modelling. Each iteration feeds directly into the next design revision.</p>
+
+            <h2>The Carbonation System</h2>
+            <p>The carbonation module handles the chemical reaction stage of the DAC process. I designed the system from first principles through to physical prototype, taking it through thermal and fluid analysis, material selection, and manufacturing coordination. The prototype was built, commissioned, and tested at full scale.</p>
+
+        </div>
+
+        <div class="project-gallery">
+            <img src="images/rivan/contactor.jpg" alt="Contactor prototype">
+            <img src="images/rivan/carb-rig.jpg" alt="Carbonation rig">
+        </div>
+
+    </div>
+
+    <footer>
+        Louis Brouwer &copy; 2026
+    </footer>
+
+</body>
+</html>
