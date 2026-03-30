@@ -183,7 +183,7 @@
         }
 
         .project-description ul li::before {
-            content: '—';
+            content: '·';
             position: absolute;
             left: 0;
             color: var(--text-muted);
@@ -243,7 +243,7 @@
         <a href="index.html#work" class="back-link">&larr; Back</a>
 
         <h1 class="project-title">Imperial College Rocketry: Pluto</h1>
-        <p class="project-context">ICLR Structures Sub-team / 2024 &ndash; 2025</p>
+        <p class="project-context">ICLR Structures Sub-team / 2024 to 2025</p>
 
         <div class="project-tags">
             <span class="tag">Aerospace</span>
@@ -255,17 +255,17 @@
         <div class="project-description">
 
             <h2>The Rocket</h2>
-            <p>Pluto is a liquid bi-propellant sounding rocket designed and built by Imperial College London Rocketry, a student team of roughly 150 members. It stands 4.5 metres tall, weighs 81 kg at lift-off, and is powered by GOOFY, a 6 kN student-researched-and-developed regeneratively cooled engine running on nitrous oxide and isopropanol. The vehicle was entered into the 9 km apogee category at EuRoC 2025, the European Rocketry Challenge held in Portugal.</p>
+            <p>Pluto is a liquid bipropellant sounding rocket designed and built by Imperial College London Rocketry, a student team of about 150 people. It stands 4.5 metres tall, weighs 81 kg at liftoff, and is powered by GOOFY, a 6 kN regeneratively cooled engine running on nitrous oxide and isopropanol. The team entered it in the 9 km apogee category at EuRoC 2025 in Portugal.</p>
 
             <h2>Stringer Design</h2>
-            <p>I led the design of Pluto's stringer system within the structures sub-team, supervising two undergraduate engineers through the process. The airframe uses a skeletal architecture rather than a conventional skin — three aluminium 6082-T6 stringers arranged in threefold symmetry, aligned with the fin positions, form the primary load path between the engine and the propellant tank.</p>
+            <p>I led the stringer design within the structures sub team, supervising two undergraduate engineers. The airframe uses a skeletal architecture instead of a conventional skin. Three aluminium 6082 T6 stringers sit in threefold symmetry, aligned with the fin positions, and form the primary load path between the engine and the propellant tank.</p>
 
-            <p>The stringers carry the full 6 kN compressive thrust load from the engine truss up into the tank's lower bulkhead. Initial sizing was done through Euler buckling analysis, with the critical load calculated as P<sub>cr</sub> = &pi;&sup2;EI / L<sub>eff</sub>&sup2;. The profiles were then mass-optimised by introducing cut-out holes along their length, reducing weight without compromising structural integrity.</p>
+            <p>The stringers carry the full 6 kN compressive thrust load from the engine truss into the tank's lower bulkhead. I sized them initially through Euler buckling analysis (P<sub>cr</sub> = &pi;&sup2;EI / L<sub>eff</sub>&sup2;) and then mass optimised them by adding cutout holes along their length to reduce weight without losing structural integrity.</p>
 
-            <h2>Simulation &amp; Validation</h2>
-            <p>Detailed buckling simulations were carried out in Abaqus CAE to validate the final geometry. The first buckling mode returned a safety factor of 3.6, confirming adequate margin against the design load. The analysis captured both local and global buckling behaviour to ensure the cut-out pattern did not introduce unexpected failure modes.</p>
+            <h2>Simulation and Validation</h2>
+            <p>I ran detailed buckling simulations in Abaqus CAE to validate the final geometry. The first buckling mode returned a safety factor of 3.6, giving good margin against the design load. The analysis captured both local and global buckling behaviour to make sure the cutout pattern didn't introduce unexpected failure modes.</p>
 
-            <p>The stringers were water-jet cut from aluminium plate and connect at their base to a generatively designed engine truss. That truss, additively manufactured in AlSi10Mg, was compression tested to the full 6 kN engine load before being cleared for flight.</p>
+            <p>The stringers were waterjet cut from aluminium plate. They connect at their base to a generatively designed engine truss, additively manufactured in AlSi10Mg, which we compression tested to the full 6 kN engine load before clearing it for flight.</p>
 
             <h2>Vehicle Overview</h2>
             <ul>
@@ -274,9 +274,9 @@
                 <li>Peak acceleration: 5.64 g</li>
                 <li>Burn time: 9.1 seconds</li>
                 <li>Total flight time: 238.8 seconds</li>
-                <li>Engine: 6 kN SRAD regeneratively cooled (pintle injector, 7+ successful hot-fires)</li>
+                <li>Engine: 6 kN SRAD regeneratively cooled (pintle injector, 7+ successful hot fires)</li>
                 <li>Propellant tank: common bulkhead, 18.5 kg</li>
-                <li>Recovery: reefed parachute with non-pyrotechnic clamp-band separation</li>
+                <li>Recovery: reefed parachute with clamp band separation (no pyrotechnics)</li>
             </ul>
 
         </div>

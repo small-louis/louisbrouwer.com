@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinetic Canvas — Louis Brouwer</title>
+    <title>BEng Thesis: Landmine Detection | Louis Brouwer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -87,7 +87,7 @@
         }
 
         /* PROJECT PAGE */
-        .project {
+        .project-page {
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 120px 40px 80px;
@@ -99,7 +99,7 @@
             color: var(--text-muted);
             text-decoration: none;
             letter-spacing: 0.03em;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
             transition: color 0.2s;
         }
 
@@ -108,7 +108,7 @@
         }
 
         .project-title {
-            font-size: 42px;
+            font-size: 36px;
             font-weight: 300;
             letter-spacing: -0.02em;
             margin-bottom: 8px;
@@ -117,8 +117,7 @@
         .project-context {
             font-size: 14px;
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-weight: 300;
             margin-bottom: 20px;
         }
 
@@ -129,7 +128,7 @@
             margin-bottom: 48px;
         }
 
-        .tag {
+        .project-tags .tag {
             font-size: 11px;
             padding: 4px 10px;
             border: 1px solid var(--border);
@@ -138,31 +137,53 @@
             letter-spacing: 0.04em;
         }
 
-        /* GALLERY */
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 56px;
+        .project-hero {
+            width: 100%;
+            display: block;
+            margin-bottom: 48px;
         }
 
-        .gallery img {
+        .project-hero img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        .project-gallery img {
             width: 100%;
             display: block;
             background: #1a1a1a;
         }
 
-        /* DESCRIPTION */
         .project-description {
             max-width: 720px;
-            margin-bottom: 40px;
+        }
+
+        .project-description h2 {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .project-description h2:first-child {
+            margin-top: 0;
         }
 
         .project-description p {
             font-size: 16px;
             font-weight: 300;
             line-height: 1.7;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             color: var(--text);
         }
 
@@ -170,18 +191,33 @@
             margin-bottom: 0;
         }
 
-        /* GITHUB LINK */
-        .project-link {
-            display: inline-block;
-            font-size: 13px;
+        /* PDF EMBED */
+        .pdf-viewer {
+            width: 100%;
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 800px;
+            border: 1px solid var(--border);
+            background: #1a1a1a;
+        }
+
+        .project-download {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-download a {
+            font-size: 14px;
             color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            text-decoration: none;
             transition: color 0.2s;
         }
 
-        .project-link:hover {
+        .project-download a:hover {
             color: var(--text);
         }
 
@@ -200,8 +236,10 @@
             nav { padding: 16px 20px; }
             nav .links { gap: 16px; }
             nav .links a { font-size: 12px; }
-            .project { padding: 100px 20px 60px; }
-            .project-title { font-size: 32px; }
+            .project-page { padding: 100px 20px 60px; }
+            .project-title { font-size: 28px; }
+            .project-gallery { grid-template-columns: 1fr; }
+            .pdf-viewer iframe { height: 500px; }
         }
     </style>
 </head>
@@ -218,40 +256,55 @@
         </div>
     </nav>
 
-    <main class="project">
+    <div class="project-page">
+
         <a href="index.html#work" class="back-link">&larr; Back</a>
 
-        <h1 class="project-title">Kinetic Canvas</h1>
-        <div class="project-context">IDE Cyberphysical Systems / 2025</div>
+        <h1 class="project-title">BEng Thesis: Landmine Detection with Deep Learning</h1>
+        <p class="project-context">University of Edinburgh / 2024</p>
+
         <div class="project-tags">
-            <span class="tag">Mechanical Engineering</span>
-            <span class="tag">Electronics</span>
-            <span class="tag">Software</span>
-            <span class="tag">Branding</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Ground Penetrating Radar</span>
+            <span class="tag">Numerical Modelling</span>
+            <span class="tag">Signal Processing</span>
         </div>
 
-        <div class="gallery">
-            <img src="images/kinetic-canvas/hero.jpg" alt="Kinetic Canvas hero shot">
-            <video autoplay muted loop playsinline style="width:100%;display:block;background:#1a1a1a;">
-                <source src="images/kinetic-canvas/demo.mp4" type="video/mp4">
-            </video>
-            <img src="images/kinetic-canvas/full-view.jpg" alt="Kinetic Canvas full view">
-            <img src="images/kinetic-canvas/angle.jpg" alt="Kinetic Canvas angle view">
-            <video autoplay muted loop playsinline style="width:100%;display:block;background:#1a1a1a;">
-                <source src="images/kinetic-canvas/railway-loop.mp4" type="video/mp4">
-            </video>
-            <img src="images/kinetic-canvas/servos.jpg" alt="Servo motor array">
-            <img src="images/kinetic-canvas/fabric-detail.jpg" alt="Fabric surface detail">
-            <img src="images/kinetic-canvas/team.jpg" alt="Team photo">
+        <div class="project-hero">
+            <img src="images/thesis/Setup.png" alt="GPR simulation setup showing antenna, soil, and landmine geometry">
         </div>
 
         <div class="project-description">
-            <p>Kinetic Canvas is a moving sculpture. An array of servo motors pushes a fabric surface through mechanical linkages, creating flowing patterns of light and shadow. I designed the mechanical system, wrote the control software with the team, and built the brand identity around the project.</p>
-            <p>It won the Interplay competition and we pitched it commercially at PS Labs in Bermondsey.</p>
+
+            <h2>The Problem</h2>
+            <p>Landmine detection using ground penetrating radar (GPR) is promising but limited by a lack of real world training data. Collecting labelled GPR scans over actual minefields is dangerous, slow, and expensive. Without enough training data, machine learning models can't learn to generalise well.</p>
+
+            <h2>The Approach</h2>
+            <p>I trained a neural network entirely on synthetic GPR data and tested whether it could detect landmines in real radar scans it had never seen before. The synthetic data came from FDTD numerical simulations. I built a digital twin of a GSSI 2 GHz antenna and modelled PMN landmine targets buried at various depths in different soil conditions.</p>
+
+            <p>The model architecture is a convolutional neural network that takes raw GPR B scan images as input and classifies them as containing a landmine or not. I trained it on thousands of simulated scans and then validated it against real GPR data collected with physical hardware.</p>
+
+            <h2>Results</h2>
+            <p>The model achieved 80% accuracy on individual real world scans. When I applied a weighted averaging method across multiple scans of the same area, accuracy reached 100%. This showed that synthetic training data can bridge the gap to real world performance, which is a meaningful result for humanitarian demining applications.</p>
+
+            <p>This thesis won the IMechE Best Student Award.</p>
+
         </div>
 
-        <a href="https://github.com/small-louis/Illuminating-the-Unknown" class="project-link" target="_blank">View on GitHub &rarr;</a>
-    </main>
+        <div class="project-gallery">
+            <img src="images/thesis/Architecture.png" alt="Neural network architecture diagram">
+            <img src="images/thesis/ROC.png" alt="ROC curves showing model performance">
+        </div>
+
+        <div class="pdf-viewer">
+            <iframe src="Louis-Brouwer-Thesis.pdf" title="Full thesis PDF"></iframe>
+        </div>
+
+        <div class="project-download">
+            <a href="Louis-Brouwer-Thesis.pdf" download>Download the full thesis (PDF)</a>
+        </div>
+
+    </div>
 
     <footer>
         Louis Brouwer &copy; 2026
