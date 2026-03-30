@@ -164,6 +164,19 @@
             margin-bottom: 0;
         }
 
+        .pdf-viewer {
+            width: 100%;
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        .pdf-viewer iframe {
+            width: 100%;
+            aspect-ratio: 1 / 1.414;
+            border: 1px solid var(--border);
+            background: #1a1a1a;
+        }
+
         .project-download {
             margin-top: 48px;
             padding-top: 32px;
@@ -197,6 +210,7 @@
             nav .links a { font-size: 12px; }
             .project-page { padding: 100px 20px 60px; }
             .project-title { font-size: 28px; }
+            .pdf-viewer iframe { aspect-ratio: 1 / 1.414; }
         }
     </style>
 </head>
@@ -236,6 +250,10 @@
             <p>The shape draws on the curule chair. I built it through a layered process with a structural base of large brick fragments topped with a fiberglass reinforced layer. The finished piece weighs about 75kg.</p>
 
             <p>The pink colour comes from crushed brick dust in the mix. I left the surface textures to emerge naturally from the casting process rather than forcing precision. The material should speak for itself.</p>
+        </div>
+
+        <div class="pdf-viewer">
+            <iframe src="SUPERGREEN BOOKLET V6.pdf" title="SuperGreen project booklet PDF"></iframe>
         </div>
 
         <div class="project-download">

@@ -190,6 +190,36 @@
             margin-bottom: 0;
         }
 
+        /* PDF EMBED */
+        .pdf-viewer {
+            width: 100%;
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        .pdf-viewer iframe {
+            width: 100%;
+            aspect-ratio: 1 / 1.414;
+            border: 1px solid var(--border);
+            background: #1a1a1a;
+        }
+
+        .project-download {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-download a {
+            font-size: 14px;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .project-download a:hover {
+            color: var(--text);
+        }
+
         /* FOOTER */
         footer {
             max-width: var(--max-width);
@@ -208,6 +238,7 @@
             .project-page { padding: 100px 20px 60px; }
             .project-title { font-size: 28px; }
             .project-gallery { grid-template-columns: 1fr; }
+            .pdf-viewer iframe { aspect-ratio: 1 / 1.414; }
         }
     </style>
 </head>
@@ -260,6 +291,10 @@
         <div class="project-gallery">
             <img src="images/level/app-mockup.png" alt="LeveL app and watch interface">
             <img src="images/level/banking-screen.png" alt="Open banking integration screen">
+        </div>
+
+        <div class="pdf-viewer">
+            <iframe src="Level-Exhibition-Booklet.pdf" title="LeveL exhibition booklet PDF"></iframe>
         </div>
 
         <div class="project-download">

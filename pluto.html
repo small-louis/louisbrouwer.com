@@ -189,6 +189,19 @@
             color: var(--text-muted);
         }
 
+        .pdf-viewer {
+            width: 100%;
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        .pdf-viewer iframe {
+            width: 100%;
+            aspect-ratio: 1 / 1.414;
+            border: 1px solid var(--border);
+            background: #1a1a1a;
+        }
+
         .project-download {
             margin-top: 48px;
             padding-top: 32px;
@@ -222,6 +235,7 @@
             nav .links a { font-size: 12px; }
             .project-page { padding: 100px 20px 60px; }
             .project-title { font-size: 28px; }
+            .pdf-viewer iframe { aspect-ratio: 1 / 1.414; }
         }
     </style>
 </head>
@@ -279,6 +293,10 @@
                 <li>Recovery: reefed parachute with clamp band separation (no pyrotechnics)</li>
             </ul>
 
+        </div>
+
+        <div class="pdf-viewer">
+            <iframe src="Pluto_Technical_Report.pdf" title="EuRoC technical report PDF"></iframe>
         </div>
 
         <div class="project-download">
