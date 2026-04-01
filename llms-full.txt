@@ -1,0 +1,125 @@
+# Louis Brouwer
+
+> Mechanical engineer and designer based in London, UK. R&D engineer at Rivan Industries (climate tech). MSc/MA Innovation Design Engineering from Imperial College London and the Royal College of Art (2026). BEng Mechanical Engineering from the University of Edinburgh (First Class, IMechE Best Student Award). UK and Dutch citizen.
+
+## About
+
+Louis studied mechanical engineering at Edinburgh (First Class, IMechE Best Student Award) and is finishing a masters in Innovation Design Engineering at Imperial College London and the Royal College of Art.
+
+He works as an R&D engineer at Rivan Industries, a climate tech startup building direct air capture and synthetic fuel technology. He designed and tested the 100kW carbonation prototype there.
+
+Before university he ran a furniture business called Boog Design out of his parents' garage. He started it at 15 and delivered over 25 commissions for roughly GBP 50k in total revenue.
+
+He has captained a 57 foot sailing yacht across the Atlantic and back. Four crossings total.
+
+He holds UK and Dutch citizenship.
+
+## Current Role
+
+R&D Mechanical Engineer at Rivan Industries (2025 to present). Designing and validating a 100kW carbonation prototype for a direct air capture system. The work covers research, hypothesis formation, prototyping, testing, and system modelling.
+
+## Projects
+
+### Kinetic Canvas
+URL: https://louisbrouwer.com/kinetic-canvas.html
+Context: IDE Cyberphysical Systems, 2025
+Tags: Mechanical Engineering, Electronics, Software, Branding
+
+A kinetic sculpture that moves fabric through mechanical linkages and servo motors. Louis designed the mechanical system, wrote the control software with the team, and built the brand identity around the project. It won the Interplay competition and was pitched commercially at PS Labs in Bermondsey.
+
+GitHub: https://github.com/small-louis
+
+### Rivan Industries: DAC Carbonation System
+URL: https://louisbrouwer.com/rivan.html
+Context: Rivan Industries, 2025 to present
+Tags: Mechanical Engineering, Thermodynamics, Prototyping
+
+Rivan Industries is a climate tech startup building direct air capture and synthetic fuel technology. The system is modular, with three process stages that pull CO2 from the atmosphere and convert it into fuel.
+
+Louis joined as an R&D Mechanical Engineer while finishing his masters at Imperial and the RCA. His main job has been designing and validating the 100kW carbonation prototype, one of three core modules in the full system. The work is a tight loop: research, hypothesis, prototype, test, model. Each iteration feeds the next design revision.
+
+The carbonation module handles the chemical reaction stage of the DAC process. He designed it from first principles through to a physical prototype, covering thermal and fluid analysis, material selection, and manufacturing. The prototype was built, commissioned, and tested at full scale.
+
+### LeveL: Gambling Harm Prevention
+URL: https://louisbrouwer.com/level.html
+Context: IDE Group Project, 2025
+Tags: Service Design, Scientific Method, Software (Swift), Hardware
+
+A gambling harm prevention system that uses vibrotactile stimulation, open banking, and location awareness to intervene in real time. The core hardware is a wearable that delivers rhythmic vibration to stabilise mood and sharpen focus during gambling sessions. A Swift app connects to open banking APIs for spending awareness and uses geo fencing to detect when the user enters a gambling venue.
+
+The team ran a double blind controlled trial to measure the effect of vibrotactile stimulation on gambling decisions. Louis built the measurement hardware and the Swift application for the trial. The results showed statistically significant evidence that the intervention works.
+
+Exhibition booklet available at: https://louisbrouwer.com/Level-Exhibition-Booklet.pdf
+
+### SuperGreen: Roman Concrete Stool
+URL: https://louisbrouwer.com/supergreen.html
+Context: IDE SuperGreen Module, 2025
+Tags: Material Science, Physical Making, Sustainability
+
+A 75kg stool cast from Roman concrete (cocciopesto), a lime and crushed brick mix that heals itself in the rain. The form borrows from classical Roman furniture (the curule chair) and is designed for outdoor use. Built through a layered process with a structural base of large brick fragments topped with a fiberglass reinforced layer. The pink colour comes from crushed brick dust in the mix.
+
+Project booklet available at: https://louisbrouwer.com/SuperGreen-Booklet.pdf
+
+### Boog Design
+URL: https://louisbrouwer.com/boog.html
+Context: Personal Business, 2015 to 2022
+Tags: Woodworking, Design, Business
+
+Louis started Boog Design at 15 from his parents' garage. Over the next seven years he delivered more than 25 commissions including kitchens, tables, stools, shelving, and one off pieces. Roughly GBP 50k total revenue.
+
+Sub projects include: Custom Kitchen, Green Cabinet, Oak Chair, Bent Plywood Stool, Chess Table, Wooden Vase, Shelving, Built in Wardrobe, Turned Plates.
+
+### Imperial College Rocketry: Pluto
+URL: https://louisbrouwer.com/pluto.html
+Context: ICLR Structures Sub team, 2024 to 2025
+Tags: Aerospace, Structural Analysis, FEA, Leadership
+
+Pluto is a liquid bipropellant sounding rocket designed and built by Imperial College London Rocketry. It stands 4.5 metres tall, weighs 81 kg at liftoff, and is powered by GOOFY, a 6 kN regeneratively cooled engine running on nitrous oxide and isopropanol. The team entered it in the 9 km apogee category at EuRoC 2025 in Portugal.
+
+Louis led the stringer design within the structures sub team, supervising two undergraduate engineers. The airframe uses a skeletal architecture instead of a conventional skin. Three aluminium 6082 T6 stringers sit in threefold symmetry, aligned with the fin positions, and form the primary load path between the engine and the propellant tank.
+
+The stringers carry the full 6 kN compressive thrust load from the engine truss into the tank's lower bulkhead. Sized initially through Euler buckling analysis, then mass optimised with cutout holes. Buckling simulations in Abaqus CAE validated the final geometry with a safety factor of 3.6. The stringers were waterjet cut from aluminium plate and connect to a generatively designed engine truss, additively manufactured in AlSi10Mg.
+
+Technical report available at: https://louisbrouwer.com/Pluto_Technical_Report.pdf
+
+### BEng Thesis: Landmine Detection with Deep Learning
+URL: https://louisbrouwer.com/thesis.html
+Context: University of Edinburgh, 2024
+Tags: Machine Learning, Ground Penetrating Radar, Numerical Modelling, Signal Processing
+
+Louis trained a neural network entirely on synthetic GPR data and tested whether it could detect landmines in real radar scans it had never seen before. The synthetic data came from FDTD numerical simulations. He built a digital twin of a GSSI 2 GHz antenna and modelled PMN landmine targets buried at various depths in different soil conditions.
+
+The model is a convolutional neural network that takes raw GPR B scan images as input and classifies them as containing a landmine or not. Trained on thousands of simulated scans and validated against real GPR data collected with physical hardware. The model achieved 80% accuracy on individual real world scans. With a weighted averaging method across multiple scans of the same area, accuracy reached 100%.
+
+This thesis won the IMechE Best Student Award.
+
+Full thesis available at: https://louisbrouwer.com/Louis-Brouwer-Thesis.pdf
+Landmine classifier code: https://github.com/small-louis/Landmine_Classifier
+
+## Skills
+
+Mechanical engineering, thermodynamics, FEA (Abaqus CAE), structural analysis (Euler buckling, simulation), prototyping, CAD, climate technology, direct air capture, machine learning (convolutional neural networks), signal processing, ground penetrating radar (GPR), numerical modelling (FDTD), embedded systems, Swift development, electronics, woodworking, furniture fabrication, branding, service design.
+
+## Education
+
+- MSc/MA Innovation Design Engineering, Imperial College London and Royal College of Art (expected 2026)
+- BEng Mechanical Engineering, University of Edinburgh (First Class, IMechE Best Student Award)
+
+## Awards
+
+- IMechE Best Student Award (BEng Thesis, University of Edinburgh, 2024)
+- Interplay Competition Winner (Kinetic Canvas, 2025)
+
+## Reading List
+
+A Conflict of Visions by Thomas Sowell, The Road Less Travelled by M. Scott Peck, Build by Tony Fadell, Let My People Go Surfing by Yvon Chouinard, Barbarian Days by William Finnegan, Red Plenty by Francis Spufford, The Unbearable Lightness of Being by Milan Kundera, The Knowledge by Lewis Dartnell, Postcapitalism by Paul Mason, Utopia for Realists by Rutger Bregman, Winnetou by Karl May, Zero to One by Peter Thiel, Endurance by Scott Kelly, Stuff Matters by Mark Miodownik, Steve Jobs by Walter Isaacson, Einstein by Walter Isaacson, Long Walk to Freedom by Nelson Mandela.
+
+Full reading list: https://louisbrouwer.com/reading.html
+
+## Contact
+
+- Email: loet.d.s.brouwer@gmail.com
+- LinkedIn: https://www.linkedin.com/in/louis-brouwer/
+- GitHub: https://github.com/small-louis
+- CV: https://louisbrouwer.com/Louis-Brouwer-CV.pdf
+- Website: https://louisbrouwer.com

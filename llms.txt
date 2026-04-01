@@ -1,0 +1,33 @@
+# Louis Brouwer
+
+> Mechanical engineer and designer based in London, UK. R&D engineer at Rivan Industries (climate tech). MSc/MA Innovation Design Engineering from Imperial College London and the Royal College of Art (2026). BEng Mechanical Engineering from the University of Edinburgh (First Class, IMechE Best Student Award). UK and Dutch citizen.
+
+## Current Role
+
+R&D Mechanical Engineer at Rivan Industries, designing and validating a 100kW carbonation prototype for a direct air capture system.
+
+## Projects
+
+- [Kinetic Canvas](https://louisbrouwer.com/kinetic-canvas.html): Kinetic sculpture using servo motors and mechanical linkages to animate fabric. Won the Interplay competition. Pitched commercially at PS Labs.
+- [Rivan Industries: DAC Carbonation System](https://louisbrouwer.com/rivan.html): 100kW carbonation prototype for direct air capture. Full cycle from research through prototyping and system modelling.
+- [LeveL: Gambling Harm Prevention](https://louisbrouwer.com/level.html): Wearable system using vibrotactile stimulation, open banking, and geo activation to reduce gambling harm. Double blind controlled trial.
+- [SuperGreen: Roman Concrete Stool](https://louisbrouwer.com/supergreen.html): 75kg stool cast from cocciopesto (Roman concrete). Self healing material designed for outdoor use.
+- [Boog Design](https://louisbrouwer.com/boog.html): Furniture business started at age 15. Over 25 commissions, roughly GBP 50k total revenue (2015 to 2022).
+- [Imperial College Rocketry: Pluto](https://louisbrouwer.com/pluto.html): Led stringer design on a 4.5m liquid bipropellant sounding rocket for EuRoC 2025.
+- [BEng Thesis: Landmine Detection with Deep Learning](https://louisbrouwer.com/thesis.html): Trained neural network on synthetic GPR data to detect landmines. 100% accuracy with weighted averaging. IMechE Best Student Award.
+
+## Skills
+
+Mechanical engineering, thermodynamics, FEA, structural analysis, prototyping, CAD, climate technology, direct air capture, machine learning, signal processing, ground penetrating radar, numerical modelling (FDTD), embedded systems, Swift development, woodworking, furniture fabrication.
+
+## Education
+
+- MSc/MA Innovation Design Engineering, Imperial College London and Royal College of Art (2026)
+- BEng Mechanical Engineering, University of Edinburgh (First Class)
+
+## Contact
+
+- Email: loet.d.s.brouwer@gmail.com
+- LinkedIn: https://www.linkedin.com/in/louis-brouwer/
+- GitHub: https://github.com/small-louis
+- CV: https://louisbrouwer.com/Louis-Brouwer-CV.pdf
