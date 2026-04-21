@@ -13,7 +13,6 @@ R&D Mechanical Engineer at Rivan Industries, designing and validating a 100kW ca
 - [LeveL: Gambling Harm Prevention](https://louisbrouwer.com/level.html): Wearable system using vibrotactile stimulation, open banking, and geo activation to reduce gambling harm. Double blind controlled trial.
 - [SuperGreen: Roman Concrete Stool](https://louisbrouwer.com/supergreen.html): 75kg stool cast from cocciopesto (Roman concrete). Self healing material designed for outdoor use.
 - [Boog Design](https://louisbrouwer.com/boog.html): Furniture business started at age 15. Over 25 commissions, roughly GBP 50k total revenue (2015 to 2022).
-- [Imperial College Rocketry: Pluto](https://louisbrouwer.com/pluto.html): Led stringer design on a 4.5m liquid bipropellant sounding rocket for EuRoC 2025.
 - [BEng Thesis: Landmine Detection with Deep Learning](https://louisbrouwer.com/thesis.html): Trained neural network on synthetic GPR data to detect landmines. 100% accuracy with weighted averaging. IMechE Best Student Award.
 
 ## Skills
@@ -30,4 +29,4 @@ Mechanical engineering, thermodynamics, FEA, structural analysis, prototyping, C
 - Email: loet.d.s.brouwer@gmail.com
 - LinkedIn: https://www.linkedin.com/in/louis-brouwer/
 - GitHub: https://github.com/small-louis
-- CV: https://louisbrouwer.com/Louis-Brouwer-CV.pdf
+- Website: https://louisbrouwer.com

@@ -69,19 +69,6 @@ Louis started Boog Design at 15 from his parents' garage. Over the next seven ye
 
 Sub projects include: Custom Kitchen, Green Cabinet, Oak Chair, Bent Plywood Stool, Chess Table, Wooden Vase, Shelving, Built in Wardrobe, Turned Plates.
 
-### Imperial College Rocketry: Pluto
-URL: https://louisbrouwer.com/pluto.html
-Context: ICLR Structures Sub team, 2024 to 2025
-Tags: Aerospace, Structural Analysis, FEA, Leadership
-
-Pluto is a liquid bipropellant sounding rocket designed and built by Imperial College London Rocketry. It stands 4.5 metres tall, weighs 81 kg at liftoff, and is powered by GOOFY, a 6 kN regeneratively cooled engine running on nitrous oxide and isopropanol. The team entered it in the 9 km apogee category at EuRoC 2025 in Portugal.
-
-Louis led the stringer design within the structures sub team, supervising two undergraduate engineers. The airframe uses a skeletal architecture instead of a conventional skin. Three aluminium 6082 T6 stringers sit in threefold symmetry, aligned with the fin positions, and form the primary load path between the engine and the propellant tank.
-
-The stringers carry the full 6 kN compressive thrust load from the engine truss into the tank's lower bulkhead. Sized initially through Euler buckling analysis, then mass optimised with cutout holes. Buckling simulations in Abaqus CAE validated the final geometry with a safety factor of 3.6. The stringers were waterjet cut from aluminium plate and connect to a generatively designed engine truss, additively manufactured in AlSi10Mg.
-
-Technical report available at: https://louisbrouwer.com/Pluto_Technical_Report.pdf
-
 ### BEng Thesis: Landmine Detection with Deep Learning
 URL: https://louisbrouwer.com/thesis.html
 Context: University of Edinburgh, 2024
@@ -121,5 +108,5 @@ Full reading list: https://louisbrouwer.com/reading.html
 - Email: loet.d.s.brouwer@gmail.com
 - LinkedIn: https://www.linkedin.com/in/louis-brouwer/
 - GitHub: https://github.com/small-louis
-- CV: https://louisbrouwer.com/Louis-Brouwer-CV.pdf
+- Website: https://louisbrouwer.com
 - Website: https://louisbrouwer.com
